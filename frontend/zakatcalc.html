@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="images/x-icon" href="./img/ico.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="./commonStyle.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div id="logo">
+            <a href="./index.html">
+                <img src="./img/logobarubro.png" alt="">
+                </a>
+        </div>
+        <ul class="nav" id="nav">
+            <ul class="navLogo">
+                <a href="./index.html">
+                    <img src="./img/logobarubro.png" alt="">
+                </a>
+            </ul>
+            <li class="nav-link"><a href="./index.html">Home</a></li>
+            <li class="nav-link"><a href="./aboutus.html">About Us</a></li>
+            <li class="nav-link"><a href="./zakatcalc.html">Zakat Calculator</a></li>
+            
+        </ul>
+        <div id="barContainer">
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="container">
+        <div class="textbro">
+        <h1>Zakat Calculator</h1>
+    </div>
+        <p class="sub-headline">
+            You can choose your text colour!
+        </p>
+        <div class="btnContainer">
+            <button id="red" class="btn btn1">Red</button>
+            <button id="green" class="btn btn1">Green</button>
+            <button id="yellow" class="btn btn1">Yellow</button>
+            <button id="blue" class="btn btn1">Blue</button>
+        </div>
+          
+        <!-- Zakat Pendapatan Form -->
+        <section id="zakatPendapatan">
+            <h2 class="section-title">Zakat Pendapatan</h2>
+            <p class="small-text">Amaun nisab : RM24198.00 <br> Hanya 2.5% setahun</p>
+            <input type="number" id="jumlahPendapatan" placeholder="Jumlah Pendapatan">
+            <input type="number" id="jumlahPerbelanjaan" placeholder="Jumlah Perbelanjaan">
+            <button class="calculate-btn" onclick="calculateZakatPendapatan()">Calculate</button>
+            <p id="resultPendapatan" class="result"></p>
+            <button class="reset-btn" onclick="resetZakatForm('zakatPendapatan')">Reset</button>
+        </section>
+      
+        <!-- Zakat Perniagaan Form -->
+        <section id="zakatPerniagaan">
+            <h2 class="section-title">Zakat Perniagaan</h2>
+            <p class="small-text">Amaun nisab : RM24198.00 <br> Hanya 2.5% setahun</p>
+            <input type="number" id="jualanSetahun" placeholder="Jualan Setahun">
+            <input type="number" id="modalSetahun" placeholder="Modal Setahun">
+            <button class="calculate-btn" onclick="calculateZakatPerniagaan()">Calculate</button>
+            <p id="resultPerniagaan" class="result"></p>
+            <button class="reset-btn" onclick="resetZakatForm('zakatPerniagaan')">Reset</button>
+        </section>
+      
+        <!-- Zakat Emas Form -->
+        <section id="zakatEmas">
+            <h2 class="section-title">Zakat Emas</h2>
+            <p class="small-text">Nilai Uruf (Pakai) : 800 gram <br>Nilai Uruf (Simpan) : 85 gram<br> Harga Emas : RM284.69</p>
+            <input type="number" id="weightOfGold" placeholder="Weight of Gold">
+            <select id="goldUsage">
+                <option value="simpan">Simpan</option>
+                <option value="pakai">Pakai</option>
+            </select>
+            <button class="calculate-btn" onclick="calculateZakatEmas()">Calculate</button>
+            <p id="resultEmas" class="result"></p>
+            <button class="reset-btn" onclick="resetZakatForm('zakatEmas')">Reset</button>
+        </section>
+      
+        <!-- Zakat Wang Simpanan Form -->
+        <section id="zakatSimpanan">
+            <h2 class="section-title">Zakat Wang Simpanan</h2>
+            <p class="small-text">Amaun nisab : RM24198.00 <br> Hanya 2.5% setahun</p>
+            <input type="number" id="jumlahSimpanan" placeholder="Jumlah Simpanan">
+            <button class="calculate-btn" onclick="calculateZakatSimpanan()">Calculate</button>
+            <p id="resultSimpanan" class="result"></p>
+            <button class="reset-btn" onclick="resetZakatForm('zakatSimpanan')">Reset</button>
+        </section>
+    </div>
+    <!-- footer -->
+    <footer>
+        
+        <div class="footerlinksContainer">
+            <div class="footerAboutus">
+                <img src="./img/logobarubro.png" alt="">
+                <p class="darkPara">Our Social Media</p>
+                <div class="footersociallinkContainer">
+                    <img class="sociallink" src="./img/fabook-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/twitter-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/inkedin-icon-white.svg" alt="">
+                    <img class="sociallink" src="./img/whatsapp-icon-white.svg" alt="">
+                </div>
+            </div>
+
+
+
+        <div class="footerCopyright">
+             <p>&copy; 2024 design and developed by <a href="#" class="developedBy">Group 2</a>.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>  
+    <script src="./calc.js"></script>
+    <script src="themeButton.js"></script>  
+</body>
+</html>
